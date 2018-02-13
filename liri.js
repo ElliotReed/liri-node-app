@@ -49,12 +49,11 @@ function getSpotify(){
     if (err) {
       return console.log('Error occurred: ' + err);
     }
-   
-  console.log(data.tracks.items);
-  console.log(data.tracks.items.name); 
-  console.log(data.tracks.items.preview_url); 
-  console.log(data.tracks.items.album);  
-  });
+    console.log(data.tracks.items[0].name); 
+    console.log(data.tracks.items[0].album.name);
+    console.log(data.tracks.items[0].album.artists[0].name);
+    console.log(data.tracks.items[0].preview_url); 
+   });
 }
 
 function callOMDB(){

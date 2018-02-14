@@ -13,7 +13,15 @@ switch (inputType){
     getTweets();
     break;
   case 'spotify-this-song':
-    var song = nodeArgs[3];
+    var song = "";
+    for (var i = 3; i < nodeArgs.length; i++) {
+      if (i > 3 && i < nodeArgs.length) {
+        song = song + " " + nodeArgs[i];
+      } else {
+        song += nodeArgs[i];
+      }
+    }
+    console.log(song);
     getSpotify(song);
     break;
   case 'movie-this':

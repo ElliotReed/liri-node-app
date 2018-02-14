@@ -21,7 +21,6 @@ switch (inputType){
         song += nodeArgs[i];
       }
     }
-    console.log(song);
     getSpotify(song);
     break;
   case 'movie-this':
